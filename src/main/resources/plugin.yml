@@ -1,0 +1,48 @@
+name: MeglanCore
+version: ${project.version}
+main: net.meglandevs.meglancore.Main
+api-version: 1.16
+authors: [ Tobyhere123, SlowNewt ]
+depend:
+  - LuckPerms
+
+commands:
+  vanish:
+    aliases: ["v"]
+    description: Hides you from all players
+  msg:
+    aliases: ["tell", "message"]
+    description: sends a private message to a user
+  reply:
+    aliases: r
+    description: replys to a private message
+  socialspy:
+    aliases: ["ss"]
+  gamemode:
+    aliases: ["gm"]
+    description: yeah I don't need to explain this one...
+  heal:
+    aliases: ["h"]
+  feed:
+    aliases: ["fed"]
+  god:
+    aliases: ["godmode"]
+  freeze:
+    aliases: ["frez"]
+
+  staffchat:
+    aliases: ["sc"]
+
+
+  spawn:
+    aliases: []
+  setspawn:
+    aliases: ["setsp"]
+
+  tp:
+    aliases: ["teleport"]
+
+  tphere:
+    aliases: ["teleporthere"]
+
+  fly:
