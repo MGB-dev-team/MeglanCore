@@ -27,7 +27,7 @@ public class staffchat implements CommandExecutor {
                 for (int i = 0; i < args.length; i++)
                     message.append(String.valueOf(args[i]) + " ");
                 for(Player all : Bukkit.getOnlinePlayers()) {
-                    all.sendMessage(chat("&e&lSTAFFCHAT &8&L• &7&o" + p.getName() + " &f&o " + message));
+                    all.sendMessage(chat("&e&lSTAFFCHAT &8&L• &7&o" + p.getDisplayName() + " &f&o " + message));
                 }
             }
         }

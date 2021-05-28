@@ -20,7 +20,6 @@ public final class Main extends JavaPlugin {
 
     public static String prefix = "&b&lMEGLA&3&lNSMP";
 
-
     @Override
     public void onEnable() {
         Bukkit.getConsoleSender().sendMessage(chat("&aPlugin Enabled"));
@@ -48,6 +47,7 @@ public final class Main extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new HungerChange(), this);
         getServer().getPluginManager().registerEvents(new MoveEvent(), this);
         getServer().getPluginManager().registerEvents(new onChat(), this);
+        Utils.upDate();
     }
 
     @Override

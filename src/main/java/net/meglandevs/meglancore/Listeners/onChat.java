@@ -18,12 +18,16 @@ public class onChat implements Listener {
     public void onChat(AsyncPlayerChatEvent e) {
         Player p = e.getPlayer();
         String message = e.getMessage();
-        e.setFormat(chat(getPrefix(p.getUniqueId()) + " &7&o" + p.getName() + " &f " + message));
 
+        if(p.hasPermission("meglan.vip")) {
+            e.setFormat(chat(getPrefix(p.getUniqueId()) + "&7&o" + p.getName() + " &8|&f " + message));
+        } else {
+            e.setFormat(chat(getPrefix(p.getUniqueId()) + "&7&o" + p.getName() + " &8|&7 " + message));
+        }
         if(isVanished.contains(p)) {
             e.setCancelled(true);
             for(Player staff : Bukkit.getOnlinePlayers()) {
-                staff.sendMessage(chat("&e&lSTAFFCHAT &8&L• &7&o" + staff.getName() +  " &f&o" + message));
+                staff.sendMessage(chat("&e&lSTAFFCHAT &8&L• &7&o" + staff.getDisplayName() +  " &f&o" + message));
             }
         }
     }

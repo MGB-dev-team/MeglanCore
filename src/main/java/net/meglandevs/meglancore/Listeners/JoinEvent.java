@@ -14,6 +14,6 @@ public class JoinEvent implements Listener {
     public void QuitEvent(PlayerJoinEvent e) {
         Player p = e.getPlayer();
 
-        e.setJoinMessage(chat(Utils.getPrefix(p.getUniqueId()) + p.getDisplayName() + " &fhas &a&njoined"));
+        e.setJoinMessage(chat(Utils.getPrefix(p.getUniqueId()) + p.getName() + " &fhas &a&njoined"));
     }
 }
